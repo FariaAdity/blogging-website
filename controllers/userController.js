@@ -1,4 +1,5 @@
 const User = require('../models/User')
+const Post = require('../models/Post')
 
 exports.mustBeLoggedIn = function(req, res, next) {
   if (req.session.user) {
@@ -67,8 +68,13 @@ exports.ifUserExists = function(req, res, next) {
 }
 
 exports.profilePostsScreen = function(req, res) {
+
+  // ask our post model for posts by a certain author id
+
   res.render('profile', {
     profileUsername: req.profileUser.username,
     profileAvatar: req.profileUser.avatar
   })
 }
+
+id_rsa and id_rsa.pub or id_ed25519 and id_ed25519.pub. 
